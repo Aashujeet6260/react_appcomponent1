@@ -7,14 +7,15 @@
     "node": ">=21.6.2"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "check:types": "tsc --noEmit",
-    "lint:types": "tsc --pretty",
-    "test": "echo \"Using Storybook interaction tests via story play functions\""
+    "dev": "cd my-app && npm run dev",
+    "build": "cd my-app && npm run build",
+    "preview": "cd my-app && npm run preview",
+    "storybook": "cd my-app && npm run storybook",
+    "build-storybook": "cd my-app && npm run build-storybook",
+    "check:types": "cd my-app && npm run check:types",
+    "lint:types": "cd my-app && npm run lint:types",
+    "test": "echo \"Using Storybook interaction tests via story play functions\"",
+    "install:all": "npm install && cd my-app && npm install"
   },
   "dependencies": {
     "react": "^18.3.1",
