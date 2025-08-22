@@ -1,50 +1,32 @@
-# Component 1
+# React App Component 1
 
-A modern web development project featuring a React TypeScript application with Tailwind CSS styling and Storybook integration.
+A modern React TypeScript application with Tailwind CSS styling and Storybook integration.
 
 ## 🚀 Project Overview
 
-This project contains a main web application and a React TypeScript sub-application (`my-app`) with modern development tools and best practices.
+This is a clean, modern React application built with TypeScript, Vite, and Tailwind CSS. The project includes Storybook for component development and testing.
 
 ## 📁 Project Structure
 
 ```
 Component 1/
-├── Index.html                 # Main HTML entry point
-├── src/                       # Main source code
-│   ├── App.jsx               # Main React application
+├── src/                       # Source code
+│   ├── App.tsx               # Main App component
 │   ├── components/           # React components
-│   │   ├── Hello.jsx         # Hello component
-│   │   ├── InputField.tsx    # Input field component
-│   │   ├── InputField.stories.tsx  # Storybook stories
-│   │   └── MyInput.jsx       # Custom input component
-│   ├── styles/               # Styling files
-│   │   └── tailwind.css      # Tailwind CSS styles
+│   ├── assets/               # Static assets
 │   ├── index.css             # Global styles
-│   └── main.jsx              # Main entry point
-├── my-app/                    # React TypeScript sub-application
-│   ├── src/                  # Source code
-│   │   ├── App.tsx           # Main App component
-│   │   ├── components/       # React components
-│   │   ├── assets/           # Static assets
-│   │   └── main.tsx          # Entry point
-│   ├── public/               # Public assets
-│   ├── package.json          # Dependencies and scripts
-│   └── vite.config.ts        # Vite configuration
-├── package.json               # Root package.json
-├── tailwind.config.js         # Tailwind CSS configuration
-└── tsconfig.json             # TypeScript configuration
+│   └── main.tsx              # Entry point
+├── public/                   # Public assets
+├── package.json              # Dependencies and scripts
+├── vite.config.ts            # Vite configuration
+├── tailwind.config.js        # Tailwind CSS configuration
+├── tsconfig.json             # TypeScript configuration
+└── vercel.json               # Vercel deployment configuration
 ```
 
 ## 🛠️ Technologies Used
 
-### Main Project
-- **React** - JavaScript library for building user interfaces
-- **Tailwind CSS** - Utility-first CSS framework
-- **PostCSS** - CSS transformation tool
-
-### React TypeScript App (`my-app`)
-- **React 18** - Latest React version
+- **React 19** - Latest React version
 - **TypeScript** - Type-safe JavaScript
 - **Vite** - Fast build tool and dev server
 - **Tailwind CSS** - Utility-first CSS framework
@@ -54,7 +36,7 @@ Component 1/
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (version 16 or higher)
+- Node.js (version 18 or higher)
 - npm or yarn package manager
 
 ### Installation
@@ -65,38 +47,22 @@ Component 1/
    cd Component-1
    ```
 
-2. **Install root dependencies**
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-3. **Install React app dependencies**
-   ```bash
-   cd my-app
-   npm install
-   ```
+## 📱 Running the Application
 
-## 📱 Running the Applications
-
-### Main Application
+### Development Server
 ```bash
-# From the root directory
-npm start
-```
-
-### React TypeScript App
-```bash
-# From the my-app directory
-cd my-app
 npm run dev
 ```
 
-The React app will be available at `http://localhost:5173`
+The app will be available at `http://localhost:5173`
 
 ### Build for Production
 ```bash
-# Build the React app
-cd my-app
 npm run build
 
 # Preview the build
@@ -105,25 +71,16 @@ npm run preview
 
 ## 🎨 Available Scripts
 
-### Root Directory
-- `npm start` - Start the main application
-- `npm build` - Build the main application
-
-### React App (`my-app`)
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
-- `npm run type-check` - Check TypeScript types
+- `npm run check:types` - Check TypeScript types
+- `npm run storybook` - Start Storybook
+- `npm run build-storybook` - Build static Storybook
 
 ## 🧩 Components
 
-### Main Application Components
-- **Hello.jsx** - Basic greeting component
-- **InputField.tsx** - Reusable input field component
-- **MyInput.jsx** - Custom input implementation
-
-### React App Components
 - **App.tsx** - Main application component
 - Additional components in the `src/components/` directory
 
@@ -132,7 +89,6 @@ npm run preview
 The project includes Storybook for component development and testing:
 
 ```bash
-cd my-app
 npm run storybook
 ```
 
@@ -148,36 +104,23 @@ The project uses **Tailwind CSS** for styling:
 
 ## 🔧 Configuration Files
 
+- **vite.config.ts** - Vite build tool configuration
 - **tailwind.config.js** - Tailwind CSS configuration
 - **tsconfig.json** - TypeScript configuration
-- **vite.config.ts** - Vite build tool configuration
-- **eslint.config.js** - ESLint configuration
-- **postcss.config.js** - PostCSS configuration
-
-## 📦 Dependencies
-
-### Main Dependencies
-- React
-- Tailwind CSS
-- PostCSS
-
-### Development Dependencies
-- TypeScript
-- Vite
-- ESLint
-- Storybook
+- **vercel.json** - Vercel deployment configuration
 
 ## 🚀 Deployment
 
-### Build Process
-1. Install dependencies
-2. Run build command
-3. Deploy the `dist` folder (for React app) or build output
+### Vercel Deployment
+The project is configured for easy deployment on Vercel:
+- Automatic builds from Git
+- Optimized for Vite
+- SPA routing support
 
-### Environment Variables
-Create `.env` files for environment-specific configurations:
-- `.env.local` - Local development
-- `.env.production` - Production environment
+### Build Process
+1. Install dependencies: `npm install`
+2. Build the project: `npm run build`
+3. Deploy the `dist` folder
 
 ## 🤝 Contributing
 
@@ -197,13 +140,6 @@ For support and questions:
 - Create an issue in the repository
 - Check the documentation
 - Review the component stories in Storybook
-
-## 🔄 Updates and Maintenance
-
-- Keep dependencies updated regularly
-- Run `npm audit` to check for security vulnerabilities
-- Update TypeScript and React versions as needed
-- Maintain Storybook stories for all components
 
 ---
 
